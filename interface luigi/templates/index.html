@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teste de Webhook</title>
+    <!-- Adicione o link para o Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Adicione algum estilo personalizado, se necessário */
+        .container {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">Teste de Webhook</h1>
+        <form method="POST">
+            <div class="form-group">
+                <label for="protocolo">Número do Protocolo:</label>
+                <input type="text" class="form-control" name="protocolo" id="protocolo" placeholder="Digite o protocolo">
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar Requisição</button>
+        </form>
+        <h2 class="mt-4">Resposta para o Protocolo <span class="text-primary">{{ protocolo }}</span>:</h2>
+        <div class="card mt-3">
+            <div class="card-body">
+                <p class="card-text"><strong>Nome:</strong> {{ name }}</p>
+                <p class="card-text"><strong>Telefone:</strong> {{ phoneNumber }}</p>
+                <p class="card-text"><strong>Provedor:</strong> {{ PROVEDOR }}</p>
+            </div>
+        </div>
+    </div>
+    <!-- Adicione o link para o Bootstrap JS e jQuery para recursos adicionais, se necessário -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
